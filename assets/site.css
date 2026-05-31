@@ -62,11 +62,13 @@ a:hover {
 
 .hero-heading {
   display: flex;
-  align-items: center;
-  gap: 14px;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 14px 18px;
 }
 
 .github-avatar {
+  align-self: center;
   width: clamp(43px, 5.6vw, 61px);
   height: clamp(43px, 5.6vw, 61px);
   border: 1px solid var(--line);
@@ -85,7 +87,7 @@ a:hover {
 }
 
 .subtitle {
-  margin: 6px 0 0;
+  margin: 0;
   color: var(--muted);
   font-size: clamp(1.15rem, 2.2vw, 1.55rem);
   line-height: 1.2;
@@ -115,7 +117,7 @@ a:hover {
 }
 
 .section-intro {
-  margin: 0 0 19px;
+  margin: 0 0 28px;
   color: var(--muted);
   font-size: 1.05rem;
 }
