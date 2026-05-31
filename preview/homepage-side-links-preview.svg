@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="980" viewBox="0 0 1440 980">
+  <defs>
+    <style>
+      .bg { fill: #eef2f7; }
+      .panel { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.2; }
+      .shadow { fill: #dbe3ee; opacity: 0.7; }
+      .ink { fill: #20242f; }
+      .muted { fill: #5c6678; }
+      .line { stroke: #cbd5e1; stroke-width: 3; }
+      .soft-line { stroke: #d7e0ec; stroke-width: 1.2; }
+      .chip { fill: #f7faff; stroke: #cbd5e1; stroke-width: 1.2; }
+      .card { fill: #fbfdff; stroke: #cbd5e1; stroke-width: 1.2; }
+      .blue { fill: #2457a6; }
+      .green { fill: #26734d; }
+      .gold { fill: #8b6418; }
+      .purple { fill: #6550aa; }
+      .title { font-family: Georgia, 'Times New Roman', serif; font-size: 62px; font-weight: 700; letter-spacing: -2px; }
+      .subtitle { font-family: Arial, sans-serif; font-size: 25px; }
+      .h2 { font-family: Arial, sans-serif; font-size: 32px; font-weight: 700; }
+      .h3 { font-family: Arial, sans-serif; font-size: 21px; font-weight: 700; }
+      .body { font-family: Arial, sans-serif; font-size: 18px; }
+      .small { font-family: Arial, sans-serif; font-size: 15px; font-weight: 700; }
+      .sidebar-title { font-family: Arial, sans-serif; font-size: 23px; font-weight: 700; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1440" height="980"/>
+  <rect class="shadow" x="132" y="76" width="1180" height="820" rx="10"/>
+  <rect class="panel" x="120" y="64" width="1180" height="820" rx="10"/>
+
+  <rect x="120" y="64" width="1180" height="172" rx="10" fill="#ffffff"/>
+  <line class="soft-line" x1="120" y1="236" x2="1300" y2="236"/>
+  <text class="title ink" x="176" y="142">Shiyu Zhang</text>
+  <text class="subtitle muted" x="178" y="181">Complex Geometry</text>
+
+  <g transform="translate(176 284)">
+    <rect class="chip" x="0" y="0" width="292" height="34" rx="17"/>
+    <text class="body ink" x="15" y="23"><tspan font-weight="700">Researcher</tspan> Mathematics, China</text>
+    <rect class="chip" x="310" y="0" width="210" height="34" rx="17"/>
+    <text class="body ink" x="325" y="23"><tspan font-weight="700">B.S.</tspan> USTC, June 2020</text>
+    <rect class="chip" x="538" y="0" width="218" height="34" rx="17"/>
+    <text class="body ink" x="553" y="23"><tspan font-weight="700">Ph.D.</tspan> USTC, June 2026</text>
+    <rect class="chip" x="0" y="48" width="310" height="34" rx="17"/>
+    <text class="body ink" x="15" y="71"><tspan font-weight="700">Email</tspan> shiyu123@mail.ustc.edu.cn</text>
+    <rect class="chip" x="328" y="48" width="230" height="34" rx="17"/>
+    <text class="body ink" x="343" y="71"><tspan font-weight="700">Born</tspan> March 1999, China</text>
+  </g>
+
+  <line class="line" x1="176" y1="400" x2="930" y2="400"/>
+  <line class="line" x1="970" y1="284" x2="970" y2="820"/>
+
+  <g transform="translate(176 444)">
+    <text class="h2 ink" x="0" y="0">Research</text>
+    <rect class="card" x="0" y="28" width="360" height="130" rx="8"/>
+    <text class="h3 ink" x="22" y="68">Higgs sheaves over singular varieties</text>
+    <text class="body muted" x="22" y="102">Higgs sheaves, singular spaces,</text>
+    <text class="body muted" x="22" y="128">and non-abelian Hodge theory.</text>
+    <rect class="card" x="386" y="28" width="360" height="130" rx="8"/>
+    <text class="h3 ink" x="408" y="68">Curvature and rational connectedness</text>
+    <text class="body muted" x="408" y="102">Differential-geometric curvature</text>
+    <text class="body muted" x="408" y="128">and positivity questions.</text>
+
+    <rect class="card" x="0" y="184" width="746" height="70" rx="8"/>
+    <text class="h3 purple" x="22" y="228">Google Scholar</text>
+    <text class="body muted" x="238" y="228">Citation profile and publication list.</text>
+    <rect fill="#edf2f8" x="640" y="206" width="82" height="25" rx="13"/>
+    <text class="small muted" x="653" y="224">PROFILE</text>
+  </g>
+
+  <line class="line" x1="176" y1="730" x2="930" y2="730"/>
+  <g transform="translate(176 774)">
+    <text class="h2 ink" x="0" y="0">News</text>
+    <rect class="card" x="0" y="28" width="746" height="108" rx="8"/>
+    <text class="h3 ink" x="22" y="66">Non-abelian Hodge correspondence and the Miyaoka-Yau equality</text>
+    <text class="body muted" x="22" y="98">Workshop on Geometric Analysis 2026, PhD student report, May 24-29, 珠海.</text>
+    <text class="body ink" x="22" y="128">I will talk about recent work [5, 6].</text>
+  </g>
+
+  <g transform="translate(1010 304)">
+    <text class="sidebar-title ink" x="0" y="0">Quick links</text>
+    <text class="body muted" x="0" y="32">放到侧面的简洁列表，</text>
+    <text class="body muted" x="0" y="58">避免底部卡片显得太重。</text>
+
+    <rect class="card" x="0" y="92" width="228" height="70" rx="8"/>
+    <text class="h3 blue" x="20" y="135">Papers</text>
+    <text class="small muted" x="156" y="135">RESEARCH</text>
+
+    <rect class="card" x="0" y="178" width="228" height="70" rx="8"/>
+    <text class="h3 green" x="20" y="221">Talks</text>
+    <text class="small muted" x="158" y="221">UPDATES</text>
+
+    <rect class="card" x="0" y="264" width="228" height="70" rx="8"/>
+    <text class="h3 gold" x="20" y="307">Useful links</text>
+    <text class="small muted" x="160" y="307">NOTES</text>
+
+    <rect class="card" x="0" y="350" width="228" height="70" rx="8"/>
+    <text class="h3 purple" x="20" y="393">Teaching</text>
+    <text class="small muted" x="152" y="393">COURSE</text>
+  </g>
+
+  <text class="body muted" x="176" y="866">Preview: smaller title, same card style, and navigation moved from bottom cards to a right sidebar list.</text>
+</svg>
