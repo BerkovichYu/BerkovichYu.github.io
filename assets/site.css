@@ -158,6 +158,14 @@ a:hover {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.research-section .section-intro {
+  margin-bottom: 34px;
+}
+
+.research-card-grid {
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+}
+
 .info-card,
 .link-card,
 .news-card,
@@ -380,6 +388,7 @@ details.paper-entry p {
 
   .card-grid,
   .card-grid.three,
+  .research-card-grid,
   .quick-links,
   .profile-link,
   .homepage-layout {
