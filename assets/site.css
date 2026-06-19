@@ -235,7 +235,7 @@ a:hover {
 
 .homepage-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 192px;
+  grid-template-columns: 1fr;
   gap: 27px;
   align-items: start;
 }
@@ -245,6 +245,8 @@ a:hover {
 }
 
 .about-section {
+  display: grid;
+  gap: 13px;
   margin-top: 32px;
 }
 
@@ -253,10 +255,8 @@ a:hover {
 }
 
 .sidebar-links {
-  border-left: 2px solid var(--line);
-  padding-left: 21px;
-  position: sticky;
-  top: 22px;
+  border-top: 2px solid var(--line);
+  padding-top: 24px;
 }
 
 .sidebar-links h2 {
@@ -274,7 +274,8 @@ a:hover {
 
 .side-link-list {
   display: grid;
-  gap: 10px;
+  grid-template-columns: 1fr;
+  gap: 13px;
 }
 
 .side-link {
@@ -396,11 +397,7 @@ details.paper-entry p {
   }
 
   .sidebar-links {
-    border-left: 0;
-    border-top: 2px solid var(--line);
-    padding-left: 0;
     padding-top: 21px;
-    position: static;
   }
 }
 
