@@ -199,15 +199,20 @@
           </div>
           <aside class="home-photo" aria-label="Photo">
             <section class="youtube-module" aria-label="Music player">
-              <div class="music-player" data-youtube-id="898fwnkHoHg">
+              <div class="music-player" data-youtube-id="vHDuZUfrnT4">
                 <div class="music-player-art" aria-hidden="true"><span>♪</span></div>
                 <div class="music-player-copy">
-                  <p class="music-title"><strong class="music-track-title">That’s So True</strong> — <strong class="music-track-artist">Gracie Abrams</strong></p>
+                  <p class="music-title"><strong class="music-track-title">Paraglider</strong> — <strong class="music-track-artist">Olivia Marsh</strong></p>
                   <p class="music-player-status" aria-live="polite">Loading player…</p>
                 </div>
-                <button class="music-player-toggle" type="button" disabled aria-label="Play That’s So True by Gracie Abrams" aria-pressed="false">
-                  <span class="music-player-icon" aria-hidden="true">▶</span>
-                </button>
+                <div class="music-player-actions">
+                  <button class="music-player-toggle" type="button" disabled aria-label="Play Paraglider by Olivia Marsh" aria-pressed="false">
+                    <span class="music-player-icon" aria-hidden="true">▶</span>
+                  </button>
+                  <button class="music-player-next" type="button" disabled aria-label="Next song">
+                    <span aria-hidden="true">›</span>
+                  </button>
+                </div>
                 <div class="music-player-progress" aria-hidden="true"><span></span></div>
                 <div id="youtube-audio-embed" class="youtube-audio-embed" aria-hidden="true"></div>
               </div>
@@ -226,10 +231,13 @@
       if (!root) return;
 
       const tracks = [
-        { id: "898fwnkHoHg", title: "That’s So True", artist: "Gracie Abrams" },
-        { id: "1uHPZwjpCbQ", title: "Love is more", artist: "TWICE" }
+        { id: "vHDuZUfrnT4", title: "Paraglider", artist: "Olivia Marsh" },
+        { id: "AukBQLXGB3U", title: "Please Sister", artist: "The Cardigans" },
+        { id: "XOeryr0vUbM", title: "Baby Ain’t Made Of China", artist: "Wolf Alice" },
+        { id: "1BBk78WFJPA", title: "Elizabeth Taylor", artist: "Clare Maguire" }
       ];
       const button = root.querySelector(".music-player-toggle");
+      const nextButton = root.querySelector(".music-player-next");
       const icon = root.querySelector(".music-player-icon");
       const trackTitle = root.querySelector(".music-track-title");
       const trackArtist = root.querySelector(".music-track-artist");
@@ -245,6 +253,7 @@
         trackTitle.textContent = track.title;
         trackArtist.textContent = track.artist;
         button.setAttribute("aria-label", "Play " + track.title + " by " + track.artist);
+        nextButton.setAttribute("aria-label", "Next song: " + tracks[(currentTrack + 1) % tracks.length].title + " by " + tracks[(currentTrack + 1) % tracks.length].artist);
         status.textContent = "Click to play · " + (currentTrack + 1) + "/" + tracks.length;
       }
 
@@ -281,6 +290,7 @@
               player.cuePlaylist(tracks.map(function (track) { return track.id; }), 0, 0, "small");
               updateTrack(0);
               button.disabled = false;
+              nextButton.disabled = false;
               progressTimer = window.setInterval(updateProgress, 500);
             },
             onStateChange: function (event) {
@@ -307,6 +317,15 @@
         } else {
           player.playVideo();
         }
+      });
+
+      nextButton.addEventListener("click", function () {
+        if (!player) return;
+        const playlistIndex = typeof player.getPlaylistIndex === "function" ? player.getPlaylistIndex() : currentTrack;
+        const nextTrack = playlistIndex >= 0 ? playlistIndex + 1 : currentTrack + 1;
+        progress.style.width = "0%";
+        updateTrack(nextTrack);
+        player.playVideoAt(currentTrack);
       });
 
       window.onYouTubeIframeAPIReady = createPlayer;
