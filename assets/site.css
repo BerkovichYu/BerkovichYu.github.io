@@ -444,7 +444,7 @@ summary {
 
 .paper-number {
   color: var(--ink);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .paper-meta {
@@ -454,7 +454,7 @@ summary {
 
 .paper-title {
   color: var(--ink);
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .paper-meta a,
@@ -543,6 +543,7 @@ details.paper-entry p {
 /* Home page: editorial profile layout */
 .home-page {
   background: #f6f7f9;
+  zoom: 0.9;
 }
 
 .home-page .site-shell {
@@ -628,7 +629,7 @@ details.paper-entry p {
 
 .home-nav {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -657,28 +658,18 @@ details.paper-entry p {
 }
 
 .home-nav a::after {
-  position: absolute;
-  right: 0;
-  bottom: 5px;
-  left: 0;
-  height: 2px;
-  border-radius: 99px;
-  background: var(--blue);
-  content: "";
-  opacity: 0;
-  transform: scaleX(0.5);
-  transition: opacity 160ms ease, transform 160ms ease;
+  display: none;
 }
 
-.home-nav a:hover,
 .home-nav a.is-current {
-  color: var(--ink);
+  color: #ffffff;
+  background: #d59be2;
+  box-shadow: 0 8px 16px rgba(190, 116, 208, 0.18);
 }
 
-.home-nav a:hover::after,
-.home-nav a.is-current::after {
-  opacity: 1;
-  transform: scaleX(1);
+.home-nav a:hover:not(.is-current) {
+  color: var(--ink);
+  background: #f7effa;
 }
 
 .home-page .content {
@@ -990,11 +981,11 @@ details.paper-entry p {
 }
 
 .profile-facts dt {
-  color: #8491a3;
-  font-size: 0.88rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  color: var(--ink);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
 .profile-facts dd {
@@ -1034,7 +1025,7 @@ details.paper-entry p {
   padding: 8px 0;
   color: var(--blue);
   font-size: 1.2rem;
-  font-weight: 800;
+  font-weight: 400;
   text-decoration: none;
 }
 
@@ -1085,29 +1076,6 @@ details.paper-entry p {
   margin-top: 0;
 }
 
-.profile-identity {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin: 0 0 30px;
-}
-
-.profile-avatar {
-  display: block;
-  width: 70px;
-  height: 70px;
-  flex: 0 0 auto;
-  border: 1px solid #cbd9e9;
-  border-radius: 13px;
-  box-shadow: 0 7px 16px rgba(71, 85, 105, 0.14);
-  object-fit: cover;
-  object-position: 50% 50%;
-}
-
-.profile-identity-copy {
-  min-width: 0;
-}
-
 .profile-name,
 .profile-name-cn {
   margin: 0;
@@ -1120,11 +1088,22 @@ details.paper-entry p {
   font-size: 1.35rem;
 }
 
+.profile-name-heading {
+  margin: 0 0 44px;
+  font-size: clamp(1.85rem, 3vw, 2.25rem);
+  white-space: nowrap;
+}
+
 .profile-name-cn {
-  margin-top: 8px;
+  margin-top: 0;
   color: var(--ink);
   font-size: 1.35rem;
-  font-weight: 600;
+  font-weight: 400;
+}
+
+.profile-facts dd.profile-name,
+.profile-facts dd.profile-name-cn {
+  font-size: 1.25rem;
 }
 
 .home-page .profile-copy {
@@ -1132,6 +1111,16 @@ details.paper-entry p {
   border-left: 0;
   max-width: 780px;
   padding-left: 0;
+}
+
+.home-page .home-about,
+.home-page .home-news {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+}
+
+.home-page .home-about .profile-copy p,
+.home-page .home-news .profile-copy p {
+  font-weight: 400;
 }
 
 .home-page .profile-news-heading {
@@ -1144,8 +1133,8 @@ details.paper-entry p {
 
 .home-page .profile-copy p {
   color: #2d3542;
-  font-size: 1.4rem;
-  line-height: 1.4;
+  font-size: 1.125rem;
+  line-height: 1.55;
 }
 
 .profile-highlight {
@@ -1449,7 +1438,7 @@ details.paper-entry p {
 
 .subpage-page details.paper-entry summary {
   color: #2d3542;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.5;
 }
 

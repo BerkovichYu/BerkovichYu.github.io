@@ -15,15 +15,13 @@
         <div class="home-layout">
           <div class="home-sidebar">
           <aside class="profile-rail">
+            <p class="profile-name profile-name-heading">Shiyu Zhang</p>
             <h2>Information</h2>
-            <div class="profile-identity">
-              <img class="profile-avatar" src="assets/profile-photo.jpg?v=20" alt="Portrait of Shiyu Zhang">
-              <div class="profile-identity-copy">
-                <p class="profile-name">Shiyu Zhang</p>
-                <p class="profile-name-cn">张世宇</p>
-              </div>
-            </div>
             <dl class="profile-facts profile-info">
+              <div>
+                <dt>Chinese name</dt>
+                <dd class="profile-name-cn">张世宇</dd>
+              </div>
               <div>
                 <dt>Age</dt>
                 <dd>27 (born in 1999)</dd>
@@ -64,13 +62,15 @@
           </div>
 
           <div class="home-main">
-          <nav class="home-nav" aria-label="Main navigation">
-            <a href="#papers">Papers</a>
-            <a href="conferences/">Talks</a>
-            <a href="Useful%20links/">Useful links</a>
-            <a href="Teaching/Analysis%201/">Teaching</a>
+    <nav class="home-nav" aria-label="Main navigation">
+      <a href="./" data-page="home">Home</a>
+      <a href="?page=papers" data-page="papers">Papers</a>
+      <a href="?page=talks" data-page="talks">Talks</a>
+            <a href="?page=useful" data-page="useful">Useful links</a>
+            <a href="?page=teaching" data-page="teaching">Teaching</a>
           </nav>
 
+          <div class="home-page-content" id="home-page-content">
           <section class="home-about" id="about" aria-label="About">
             <div class="profile-main">
               <div class="profile-text">
@@ -196,6 +196,7 @@
   </div>
 </section>
         
+          </div>
           </div>
           <aside class="home-photo" aria-label="Photo">
             <section class="youtube-module" aria-label="Music player">
@@ -338,5 +339,6 @@
       });
     }());
   </script>
+  <script src="assets/home-app.js"></script>
 </body>
 </html>
