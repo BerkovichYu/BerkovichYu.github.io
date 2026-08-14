@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <title>Shiyu Zhang</title>
@@ -7,83 +8,114 @@
   <link rel="stylesheet" href="assets/site.css">
 </head>
 
-<body>
+<body class="home-page">
   <main class="site-shell">
     <article class="site-card">
-      <header class="hero">
-        <div class="hero-heading">
-    <!--      <img class="github-avatar" src="https://github.com/BerkovichYu.png" alt="BerkovichYu GitHub avatar">   -->
-          <h2 class="hero-title">Shiyu Zhang</h2>
-          <p class="subtitle">Complex Geometry</p>
-        </div>
-      </header>
+      <div class="content">
+        <div class="home-layout">
+          <div class="home-sidebar">
+          <aside class="profile-rail">
+            <h2>Information</h2>
+            <div class="profile-identity">
+              <img class="profile-avatar" src="assets/profile-photo.jpg?v=20" alt="Portrait of Shiyu Zhang">
+              <div class="profile-identity-copy">
+                <p class="profile-name">Shiyu Zhang</p>
+                <p class="profile-name-cn">张世宇</p>
+              </div>
+            </div>
+            <dl class="profile-facts profile-info">
+              <div>
+                <dt>Age</dt>
+                <dd>27 (born in 1999)</dd>
+              </div>
+              <div>
+                <dt>Position</dt>
+                <dd>Postdoctoral researcher<br>Westlake University</dd>
+              </div>
+            </dl>
 
-      <div class="content homepage-layout">
-        <div class="main-column">
-          <section class="section" aria-label="Profile">
-            <ul class="badges">
-              
-              <li class="badge"><strong>Email</strong> shiyu990426@gmail.com --> zhangshiyu@westlake.edu.cn --> shiyu123@mail.ustc.edu.cn (Sorted by frequency of use)</li>
-              <li class="badge"><strong>B.S.</strong> USTC, June 2020</li>
-              <li class="badge"><strong>Ph.D.</strong> USTC, June 2026</li>
-              <p> </p>
-              <p> I am currently a postdoctorial researcher at Westlake Univeristy. My CV is <a href="https://BerkovichYu.github.io/CV.pdf">here</a>. 
-              <p> I like to approach the same objects in complex geometry from multiple perspectives. 
-                  
-              <p> Most of my papers can be found in <a href="https://scholar.google.com/citations?hl=en&user=x2xD6cAAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>. Please feel free to contact me with comments on my work.  
-                
-              <p>  Since 2026 June, all my papers have relied on the Danus/Rethlas system relying OpenAI ChatGPT model.
+            <dl class="profile-facts">
+              <div>
+                <dt>Email</dt>
+                <dd><a href="mailto:shiyu990426@gmail.com">shiyu990426@gmail.com</a></dd>
+              </div>
+              <div>
+                <dt>B.S.</dt>
+                <dd>USTC, June 2020</dd>
+              </div>
+              <div>
+                <dt>Ph.D.</dt>
+                <dd>USTC, June 2026</dd>
+              </div>
+            </dl>
+
+            <div class="profile-actions">
+              <a href="https://BerkovichYu.github.io/CV.pdf">CV <span aria-hidden="true">↗</span></a>
+              <a href="https://scholar.google.com/citations?hl=en&user=x2xD6cAAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar <span aria-hidden="true">↗</span></a>
+            </div>
+          </aside>
+
+          <section class="home-news" id="news" aria-label="News">
+            <p class="profile-eyebrow">News</p>
+            <div class="profile-copy profile-news-copy">
+              <p>I may soon move to <span class="profile-highlight profile-highlight-key">Tohoku University</span> in <span class="profile-highlight">Sendai, Japan</span>, to begin a <span class="profile-highlight profile-highlight-key">JSPS postdoctoral fellowship</span>. My prospective host researcher is <span class="profile-highlight profile-highlight-key">Shin-ichi Matsumura</span>.</p>
+            </div>
           </section>
-        </div>
+          </div>
 
-        <aside class="sidebar-links" aria-label="Quick links">
-          <nav class="side-link-list">
-            <a class="side-link blue" href="papers/">
-              <strong>Papers</strong>
-              <em class="pill"></em>
-            </a>
-            <a class="side-link green" href="conferences/">
-              <strong>Talks</strong>
-              <em class="pill"></em>
-            </a>
-            <a class="side-link gold" href="Useful%20links/">
-              <strong>Useful links</strong>
-              <em class="pill"></em>
-            </a>
-            <a class="side-link purple" href="Teaching/Analysis%201/">
-              <strong>Teaching</strong>
-              <em class="pill"></em>
-            </a>
+          <div class="home-main">
+          <nav class="home-nav" aria-label="Main navigation">
+            <a href="#papers">Papers</a>
+            <a href="conferences/">Talks</a>
+            <a href="Useful%20links/">Useful links</a>
+            <a href="Teaching/Analysis%201/">Teaching</a>
           </nav>
-        </aside>
+
+          <section class="home-about" id="about" aria-label="About">
+            <div class="profile-main">
+              <div class="profile-text">
+                <p class="profile-eyebrow">About</p>
+                <div class="profile-copy">
+                  <p>I am currently a postdoctoral researcher at <span class="profile-highlight">Westlake University</span>, supported by funding from <span class="profile-highlight profile-highlight-key">Xin Fu</span>. Previously, I obtained my Ph.D. from the <span class="profile-highlight profile-highlight-key">University of Science and Technology of China</span> under the supervision of <span class="profile-highlight profile-highlight-key">Xi Zhang</span>.</p>
+                  <p>I like to approach the same objects in <span class="profile-highlight profile-highlight-key">complex geometry</span> from multiple perspectives—analytic, differential-geometric, and algebraic—with interests including <span class="profile-highlight profile-highlight-key">curvature positivity</span>, <span class="profile-highlight profile-highlight-key">rationality</span>, and applications of <span class="profile-highlight profile-highlight-key">Higgs sheaves</span>.</p>
+                  <p>Most of my papers can be found on <a href="https://scholar.google.com/citations?hl=en&user=x2xD6cAAAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a>. Please feel free to contact me with comments on my work.</p>
+                </div>
+              </div>
+            </div>
+          </section>
 
         
-      <section class="section"><h2 id="Preprints">Papers after AI era </h2>
+      <section class="section"><h2 id="papers">Papers after AI era </h2>
+<div class="section-note">
+  <p>Since June 2026, all my papers have relied on the Danus/Rethlas system, which uses the OpenAI ChatGPT model.</p>
+  <p class="section-note-reflection">The standard for the next paper has shifted from proving a new result to expressing its underlying meaning perfectly—as if creating a work of art.</p>
+</div>
 <p class="section-intro">
 <details class="paper-entry">
-  <summary> 9. <span> I'm writing a paper concerning RC-positivity. </span> </summary>
+  <summary><span class="paper-number">9.</span> <span class="paper-title">I'm writing a paper concerning RC-positivity.</span></summary>
 </details>
 </section>
 
 <section class="section">
 <h2>Papers before AI era</h2>
+<p class="section-note section-note-caption">我们是否会怀念那些冥思苦想的夜晚呢？ <span class="section-note-english">Will we miss those nights of deep contemplation?</span></p>
   
 <p>
 <details class="paper-entry">
-  <summary> 8. <span> Semipositivity of the orbifold second Chern class in Fujiki's class, (with <a href="https://masataka123.github.io/blog3_e/">Masataka Iwai</a> and Satoshi Jinnouchi), <a href="https://arxiv.org/abs/2607.18699">arxiv preprint:2607.18699</a>. </span> </summary>
+  <summary><span class="paper-number">8.</span> <span class="paper-title">Semipositivity of the orbifold second Chern class in Fujiki's class,</span><span class="paper-meta"> (with <a href="https://masataka123.github.io/blog3_e/">Masataka Iwai</a> and Satoshi Jinnouchi), <a href="https://arxiv.org/abs/2607.18699">arxiv preprint:2607.18699</a>.</span></summary>
 <p> The original version of the preprint [5] has been devided into two parts and this is the second part, generalizing some results concerning Chern number inequality to the Fujiki setting.
 </details>
   
 <p>
 <details class="paper-entry">
-  <summary> 7. <span> Positive holomorphic sectional curvature on rational surfaces (Single), <a href="https://arxiv.org/abs/2606.23333">arxiv</a>. </span> </summary>
+  <summary><span class="paper-number">7.</span> <span class="paper-title">Positive holomorphic sectional curvature on rational surfaces</span><span class="paper-meta"> (Single), <a href="https://arxiv.org/abs/2606.23333">arxiv</a>.</span></summary>
 <p>   In this paper, I successfully constructed K\"ahler metrics with HSC>0 on all rational surfaces. This gives a curvature chracterization of rational surfaces, thus resolving a Problem of Hitchin and Yau.
 </details>
 <p>
 
   <p>
 <details class="paper-entry">
-  <summary> 6. <span> Non-abelian Hodge corrrespondence over singular K\"ahler spaces (with Chuanjing Zhang and Xi Zhang), <a href="https://arxiv.org/abs/2601.13071"> arxiv preprint:2601.12071</a>. </span> </summary>
+  <summary><span class="paper-number">6.</span> <span class="paper-title">Non-abelian Hodge corrrespondence over singular K\"ahler spaces</span><span class="paper-meta"> (with Chuanjing Zhang and Xi Zhang), <a href="https://arxiv.org/abs/2601.13071">arxiv preprint:2601.12071</a>.</span></summary>
 <p> 
   In this paper, we establish the nonabelian Hodge correspondence over compact K\"ahler klt spaces as well as their regular loci, thereby generalizing the previous result of Greb-Kebekus-Peternell-Taji for projective klt varieties.
 <p> As an interesting application, we prove that if a projective klt variety with big canonical divisor satisfies the orbifold Miyaoka-Yau type equality in the sense of the previous work [5] joint with M. Iwai and S. Jinnouchi, then its canonical model must be a singular quotient of the unit ball. 
@@ -94,7 +126,7 @@
   
 <p>
 <details class="paper-entry">
-  <summary> 5. <span> Miyaoka-Yau inequality for singular varieties with big canonical or anticanonical divisor, (with <a href="https://masataka123.github.io/blog3_e/">Masataka Iwai</a> and Satoshi Jinnouchi), <a href="https://arxiv.org/abs/2507.08522">arxiv preprint:2507.08522v2</a>. </span> </summary>
+  <summary><span class="paper-number">5.</span> <span class="paper-title">Miyaoka-Yau inequality for singular varieties with big canonical or anticanonical divisor,</span><span class="paper-meta"> (with <a href="https://masataka123.github.io/blog3_e/">Masataka Iwai</a> and Satoshi Jinnouchi), <a href="https://arxiv.org/abs/2507.08522">arxiv preprint:2507.08522v2</a>.</span></summary>
 <p> The main result is establishing the Miyaoka-Yau inequality for projective klt varieties with big canonical divisor.
 <p> The basic idea is proving Bogomolov-Gieseker inequality formulated via the non-pluripolar product. When I discussed with M. Iwai how to extend it to the klt case, I contributed this work. 
 <p> A basic question is characterizing the equality case of Bogomolov-Gieseker inequality. It's subtle because we used the limiting process in the proof.
@@ -102,7 +134,7 @@
 <p>
 
 <details class="paper-entry">
-  <summary> 4. <span> Compact Kahler manifolds with partially semi-positive curvature, (with Xi Zhang), <a href="https://arxiv.org/abs/2504.13155"></a> to appear in the Transactions of the American Mathematical Society. </span> </summary>
+  <summary><span class="paper-number">4.</span> <span class="paper-title">Compact Kahler manifolds with partially semi-positive curvature,</span><span class="paper-meta"> (with Xi Zhang), <a href="https://arxiv.org/abs/2504.13155"></a> to appear in the Transactions of the American Mathematical Society.</span></summary>
 <p>  Our first main result provides a new differential-geometric criterion for rational connectedness. We prove that a compact Kähler manifold is rationally connected if and only if its tangent bundle is BC-p positive for every p≥1. 
      This notion of BC-p positivity is very weak and arises naturally from a Bochner-type formula associated with MRC fibrations (Proposition 3.3). 
 <p>  As a direct application, we confirm a conjecture of Prof. Lei Ni, showing that positive orthogonal Ricci curvature implies rational connectedness.
@@ -118,7 +150,7 @@
 <p>
   
 <details class="paper-entry">
-  <summary> 3. <span> The Miyaoka-Yau inequality on minimal Kahler spaces, (with Chuanjing Zhang and Xi Zhang), <a href="https://arxiv.org/abs/2503.13365">arXiv preprint:2503.13365</a>. </span> </summary>
+  <summary><span class="paper-number">3.</span> <span class="paper-title">The Miyaoka-Yau inequality on minimal Kahler spaces,</span><span class="paper-meta"> (with Chuanjing Zhang and Xi Zhang), <a href="https://arxiv.org/abs/2503.13365">arXiv preprint:2503.13365</a>.</span></summary>
 <p>  We extend the classical Miyaoka-Yau inequality to all minimal K\"ahler klt spaces.
 <p>  One key is the existence of orbifold modification by <a href="https://arxiv.org/abs/2512.20708">Kollar and Ou</a> for klt spaces. 
 <p>  This paper does provide a relatively general approach to considering Chern number inequalities and computing HN types of Higgs sheaves on K\"ahler KLT varieties.
@@ -132,7 +164,7 @@
 
 <p> 
 <details class="paper-entry">
-  <summary> 2. <span> On the structure of compact Kahler manifolds with nonnegative holomorphic sectional curvature, (with Xi Zhang), <a href="https://arxiv.org/abs/2311.18779"> arXiv preprint:2311.18779v4</a>. </span> </summary>
+  <summary><span class="paper-number">2.</span> <span class="paper-title">On the structure of compact Kahler manifolds with nonnegative holomorphic sectional curvature,</span><span class="paper-meta"> (with Xi Zhang), <a href="https://arxiv.org/abs/2311.18779">arXiv preprint:2311.18779v4</a>.</span></summary>
 <p> The main result is the establishment of a "pseudoeffective" version of Bochner-type theorem, which leads to a splitting of the tangent bundle. 
 <p> The innovation point is an elegant integral inequality.
 <p> This is a key step of the structure theorems of HSC≥0 for the Kahler case obtained by <a href="https://arxiv.org/abs/2502.00367">Professor S. Matsumura</a> recently.</p>
@@ -141,7 +173,7 @@
   
 <p>
   <details class="paper-entry">
-    <summary> 1. Regularizing property of the twisted conical Kahler-Ricci flow, (with <a href="https://math.njust.edu.cn/43/dd/c17271a345053/page5.htm">Jiawei Liu</a> and Xi Zhang), to appear in the Pacific Journal of Math, <a href="https://arxiv.org/pdf/2406.08778">arxiv version</a>. </summary>
+    <summary><span class="paper-number">1.</span> <span class="paper-title">Regularizing property of the twisted conical Kahler-Ricci flow,</span><span class="paper-meta"> (with <a href="https://math.njust.edu.cn/43/dd/c17271a345053/page5.htm">Jiawei Liu</a> and Xi Zhang), to appear in the Pacific Journal of Math, <a href="https://arxiv.org/pdf/2406.08778">arxiv version</a>.</span></summary>
 <p> The primary contribution to this work belongs to my collaborators. The most significant guidance throughout my doctoral studies undoubtedly came from my supervisor, yet I wish to express my deepest personal gratitude to my senior, Jiawei Liu. 
   During my difficult third year of PhD, I was grappling with the Kähler-Ricci flow. At that time, Jiawei had already graduated and was conducting his research in Germany. 
   Despite the distance and his own commitments, he offered me patient and consistent guidance through our online correspondence.
@@ -149,27 +181,162 @@
   Yet, looking back, I see that this very struggle—and the generous, remote mentorship he provided across continents—was fundamental. 
   It was through this process that I truly learned how to engage with a research problem, how to question, and how to begin.
   </details>
-</section>
-
-<h3>Notes</h3>
-  <details class="paper-entry">
-  <summary> 2. <span> Partial positivity, rational dimension and Bochner-type results, in the appendix of F. Bei's preprint "<a href="https://arxiv.org/abs/2602.11002v2">Simply connectedness of Kähler and Riemannian manifolds via spectral estimates</a>".  </summary>
-  <p> A small remark.
-</details>
-<p> 
-
-<p>
-  <details class="paper-entry">
-  <summary> 1. <span> (a four-page) Remark on quasi-negative k-Ricci curvature. <a href="https://arxiv.org/abs/2508.17237">arxiv preprint:2508.17237</a></span>  </summary>
-<p> This is just a note, I present an improvement on a result by Chu, Lee, and Tam based on a use of Gauss-Codazzi equation.
-<p> An example of a projective manifold with negative k-Ricci curvature admits an embedding of P^k was claimed in <a href="https://arxiv.org/abs/2011.13508">a paper by Li--Ni--Zhu</a>, this was in fact a typographical error. Thank Prof. Lei Ni for kind clarification.
-<p> I will not revise this paper until I have made sure of the existence of this example. If someone find such an example, it will be nice because it means that the study on negative k-Ricci curvature indeed provide new perspectives than negative holomorphic sectional curvature. I am not good at construting an example.
-</details>
-
+<h3 class="notes-subheading" id="notes">Notes</h3>
+  <div class="notes-list">
+    <details class="paper-entry">
+      <summary><span class="paper-number">2.</span> <span class="paper-title">Partial positivity, rational dimension and Bochner-type results,</span><span class="paper-meta"> in the appendix of F. Bei's preprint "<a href="https://arxiv.org/abs/2602.11002v2">Simply connectedness of Kähler and Riemannian manifolds via spectral estimates</a>".</span></summary>
+      <p>A small remark.</p>
+    </details>
+    <details class="paper-entry">
+      <summary><span class="paper-number">1.</span> <span class="paper-title">(a four-page) Remark on quasi-negative k-Ricci curvature.</span><span class="paper-meta"> <a href="https://arxiv.org/abs/2508.17237">arxiv preprint:2508.17237</a></span></summary>
+      <p>This is just a note, I present an improvement on a result by Chu, Lee, and Tam based on a use of Gauss-Codazzi equation.</p>
+      <p>An example of a projective manifold with negative k-Ricci curvature admits an embedding of P^k was claimed in <a href="https://arxiv.org/abs/2011.13508">a paper by Li--Ni--Zhu</a>, this was in fact a typographical error. Thank Prof. Lei Ni for kind clarification.</p>
+      <p>I will not revise this paper until I have made sure of the existence of this example. If someone find such an example, it will be nice because it means that the study on negative k-Ricci curvature indeed provide new perspectives than negative holomorphic sectional curvature. I am not good at construting an example.</p>
+    </details>
+  </div>
 </section>
         
+          </div>
+          <aside class="home-photo" aria-label="Photo">
+            <section class="youtube-module" aria-label="Music player">
+              <div class="music-player" data-youtube-id="vHDuZUfrnT4">
+                <div class="music-player-art" aria-hidden="true"><span>♪</span></div>
+                <div class="music-player-copy">
+                  <p class="music-title"><strong class="music-track-title">Paraglider</strong> — <strong class="music-track-artist">Olivia Marsh</strong></p>
+                  <p class="music-player-status" aria-live="polite">Loading player…</p>
+                </div>
+                <div class="music-player-actions">
+                  <button class="music-player-toggle" type="button" disabled aria-label="Play Paraglider by Olivia Marsh" aria-pressed="false">
+                    <span class="music-player-icon" aria-hidden="true">▶</span>
+                  </button>
+                  <button class="music-player-next" type="button" disabled aria-label="Next song">
+                    <span aria-hidden="true">›</span>
+                  </button>
+                </div>
+                <div class="music-player-progress" aria-hidden="true"><span></span></div>
+                <div id="youtube-audio-embed" class="youtube-audio-embed" aria-hidden="true"></div>
+              </div>
+            </section>
+            <figure class="about-photo">
+              <img src="assets/about-photo.jpg?v=2" alt="A bouquet of flowers in front of a bookshelf">
+            </figure>
+          </aside>
+        </div>
       </div>
     </article>
   </main>
+  <script>
+    (function () {
+      const root = document.querySelector("[data-youtube-id]");
+      if (!root) return;
+
+      const tracks = [
+        { id: "vHDuZUfrnT4", title: "Paraglider", artist: "Olivia Marsh" },
+        { id: "AukBQLXGB3U", title: "Please Sister", artist: "The Cardigans" },
+        { id: "XOeryr0vUbM", title: "Baby Ain’t Made Of China", artist: "Wolf Alice" },
+        { id: "1BBk78WFJPA", title: "Elizabeth Taylor", artist: "Clare Maguire" }
+      ];
+      const button = root.querySelector(".music-player-toggle");
+      const nextButton = root.querySelector(".music-player-next");
+      const icon = root.querySelector(".music-player-icon");
+      const trackTitle = root.querySelector(".music-track-title");
+      const trackArtist = root.querySelector(".music-track-artist");
+      const status = root.querySelector(".music-player-status");
+      const progress = root.querySelector(".music-player-progress span");
+      let player = null;
+      let progressTimer = null;
+      let currentTrack = 0;
+
+      function updateTrack(index) {
+        currentTrack = (index + tracks.length) % tracks.length;
+        const track = tracks[currentTrack];
+        trackTitle.textContent = track.title;
+        trackArtist.textContent = track.artist;
+        button.setAttribute("aria-label", "Play " + track.title + " by " + track.artist);
+        nextButton.setAttribute("aria-label", "Next song: " + tracks[(currentTrack + 1) % tracks.length].title + " by " + tracks[(currentTrack + 1) % tracks.length].artist);
+        status.textContent = "Click to play · " + (currentTrack + 1) + "/" + tracks.length;
+      }
+
+      function setPlaying(isPlaying) {
+        const track = tracks[currentTrack];
+        root.classList.toggle("is-playing", isPlaying);
+        button.setAttribute("aria-pressed", String(isPlaying));
+        button.setAttribute("aria-label", (isPlaying ? "Pause" : "Play") + " " + track.title + " by " + track.artist);
+        icon.textContent = isPlaying ? "Ⅱ" : "▶";
+        status.textContent = (isPlaying ? "Playing" : "Click to play") + " · " + (currentTrack + 1) + "/" + tracks.length;
+      }
+
+      function updateProgress() {
+        if (!player || typeof player.getDuration !== "function") return;
+        const duration = player.getDuration();
+        const current = player.getCurrentTime();
+        if (duration > 0) {
+          progress.style.width = Math.min(100, (current / duration) * 100) + "%";
+        }
+      }
+
+      function createPlayer() {
+        if (!window.YT || !window.YT.Player || player) return;
+        player = new YT.Player("youtube-audio-embed", {
+          videoId: root.dataset.youtubeId,
+          playerVars: {
+            playsinline: 1,
+            controls: 0,
+            rel: 0,
+            modestbranding: 1
+          },
+          events: {
+            onReady: function () {
+              player.cuePlaylist(tracks.map(function (track) { return track.id; }), 0, 0, "small");
+              updateTrack(0);
+              button.disabled = false;
+              nextButton.disabled = false;
+              progressTimer = window.setInterval(updateProgress, 500);
+            },
+            onStateChange: function (event) {
+              if (event.data === YT.PlayerState.PLAYING) {
+                setPlaying(true);
+              } else if (event.data === YT.PlayerState.ENDED) {
+                progress.style.width = "0%";
+                const playlistIndex = typeof player.getPlaylistIndex === "function" ? player.getPlaylistIndex() : currentTrack;
+                const nextTrack = playlistIndex >= 0 ? playlistIndex + 1 : currentTrack + 1;
+                updateTrack(nextTrack);
+                player.playVideoAt(currentTrack);
+              } else if (event.data === YT.PlayerState.PAUSED) {
+                setPlaying(false);
+              }
+            }
+          }
+        });
+      }
+
+      button.addEventListener("click", function () {
+        if (!player) return;
+        if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+          player.pauseVideo();
+        } else {
+          player.playVideo();
+        }
+      });
+
+      nextButton.addEventListener("click", function () {
+        if (!player) return;
+        const playlistIndex = typeof player.getPlaylistIndex === "function" ? player.getPlaylistIndex() : currentTrack;
+        const nextTrack = playlistIndex >= 0 ? playlistIndex + 1 : currentTrack + 1;
+        progress.style.width = "0%";
+        updateTrack(nextTrack);
+        player.playVideoAt(currentTrack);
+      });
+
+      window.onYouTubeIframeAPIReady = createPlayer;
+      const apiScript = document.createElement("script");
+      apiScript.src = "https://www.youtube.com/iframe_api";
+      document.head.appendChild(apiScript);
+
+      window.addEventListener("beforeunload", function () {
+        if (progressTimer) window.clearInterval(progressTimer);
+      });
+    }());
+  </script>
 </body>
 </html>
