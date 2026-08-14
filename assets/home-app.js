@@ -10,7 +10,7 @@
     },
     papers: {
       title: "Shiyu Zhang Papers",
-      source: "papers/index.html"
+      source: "assets/papers-content.html"
     },
     talks: {
       title: "Shiyu Zhang Talks",
@@ -64,7 +64,7 @@
         if (!response.ok) throw new Error("Unable to load " + pages[page].source);
         const documentText = await response.text();
         const parsedDocument = new DOMParser().parseFromString(documentText, "text/html");
-        const sourceContent = parsedDocument.querySelector(".subpage-page .content, .content");
+        const sourceContent = parsedDocument.querySelector(".subpage-page .content, .content, .papers-page-content");
         if (!sourceContent) throw new Error("The page has no content area");
         content.innerHTML = sourceContent.innerHTML;
         content.classList.add("is-subpage-content");
