@@ -8,10 +8,6 @@
     home: {
       title: "Shiyu Zhang"
     },
-    papers: {
-      title: "Shiyu Zhang Papers",
-      source: "papers/index.html"
-    },
     talks: {
       title: "Shiyu Zhang Talks",
       source: "conferences/index.html"
