@@ -198,15 +198,18 @@
         
           </div>
           <aside class="home-photo" aria-label="Photo">
-            <section class="youtube-module" aria-label="Music">
-              <p class="music-title"><strong>Love is more</strong> — <strong>TWICE</strong></p>
-              <div class="youtube-frame">
-                <iframe
-                  src="https://www.youtube.com/embed/1uHPZwjpCbQ?playsinline=1&rel=0"
-                  title="TWICE - Love is more (Español + Lyrics)"
-                  allow="autoplay; encrypted-media; picture-in-picture"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen></iframe>
+            <section class="youtube-module" aria-label="Music player">
+              <div class="music-player" data-youtube-id="1uHPZwjpCbQ">
+                <div class="music-player-art" aria-hidden="true"><span>♪</span></div>
+                <div class="music-player-copy">
+                  <p class="music-title"><strong>Love is more</strong> — <strong>TWICE</strong></p>
+                  <p class="music-player-status" aria-live="polite">Loading player…</p>
+                </div>
+                <button class="music-player-toggle" type="button" disabled aria-label="Play Love is more by TWICE" aria-pressed="false">
+                  <span class="music-player-icon" aria-hidden="true">▶</span>
+                </button>
+                <div class="music-player-progress" aria-hidden="true"><span></span></div>
+                <div id="youtube-audio-embed" class="youtube-audio-embed" aria-hidden="true"></div>
               </div>
             </section>
             <figure class="about-photo">
@@ -217,5 +220,83 @@
       </div>
     </article>
   </main>
+  <script>
+    (function () {
+      const root = document.querySelector("[data-youtube-id]");
+      if (!root) return;
+
+      const button = root.querySelector(".music-player-toggle");
+      const icon = root.querySelector(".music-player-icon");
+      const status = root.querySelector(".music-player-status");
+      const progress = root.querySelector(".music-player-progress span");
+      let player = null;
+      let progressTimer = null;
+
+      function setPlaying(isPlaying) {
+        root.classList.toggle("is-playing", isPlaying);
+        button.setAttribute("aria-pressed", String(isPlaying));
+        button.setAttribute("aria-label", (isPlaying ? "Pause" : "Play") + " Love is more by TWICE");
+        icon.textContent = isPlaying ? "Ⅱ" : "▶";
+        status.textContent = isPlaying ? "Playing" : "Click to play";
+      }
+
+      function updateProgress() {
+        if (!player || typeof player.getDuration !== "function") return;
+        const duration = player.getDuration();
+        const current = player.getCurrentTime();
+        if (duration > 0) {
+          progress.style.width = Math.min(100, (current / duration) * 100) + "%";
+        }
+      }
+
+      function createPlayer() {
+        if (!window.YT || !window.YT.Player || player) return;
+        player = new YT.Player("youtube-audio-embed", {
+          videoId: root.dataset.youtubeId,
+          playerVars: {
+            playsinline: 1,
+            controls: 0,
+            rel: 0,
+            modestbranding: 1
+          },
+          events: {
+            onReady: function () {
+              button.disabled = false;
+              status.textContent = "Click to play";
+              progressTimer = window.setInterval(updateProgress, 500);
+            },
+            onStateChange: function (event) {
+              if (event.data === YT.PlayerState.PLAYING) {
+                setPlaying(true);
+              } else if (event.data === YT.PlayerState.ENDED) {
+                progress.style.width = "0%";
+                setPlaying(false);
+              } else if (event.data === YT.PlayerState.PAUSED) {
+                setPlaying(false);
+              }
+            }
+          }
+        });
+      }
+
+      button.addEventListener("click", function () {
+        if (!player) return;
+        if (player.getPlayerState() === YT.PlayerState.PLAYING) {
+          player.pauseVideo();
+        } else {
+          player.playVideo();
+        }
+      });
+
+      window.onYouTubeIframeAPIReady = createPlayer;
+      const apiScript = document.createElement("script");
+      apiScript.src = "https://www.youtube.com/iframe_api";
+      document.head.appendChild(apiScript);
+
+      window.addEventListener("beforeunload", function () {
+        if (progressTimer) window.clearInterval(progressTimer);
+      });
+    }());
+  </script>
 </body>
 </html>
