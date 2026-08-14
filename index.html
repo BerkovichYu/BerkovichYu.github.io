@@ -199,13 +199,13 @@
           </div>
           <aside class="home-photo" aria-label="Photo">
             <section class="youtube-module" aria-label="Music player">
-              <div class="music-player" data-youtube-id="1uHPZwjpCbQ">
+              <div class="music-player" data-youtube-id="898fwnkHoHg">
                 <div class="music-player-art" aria-hidden="true"><span>♪</span></div>
                 <div class="music-player-copy">
-                  <p class="music-title"><strong>Love is more</strong> — <strong>TWICE</strong></p>
+                  <p class="music-title"><strong class="music-track-title">That’s So True</strong> — <strong class="music-track-artist">Gracie Abrams</strong></p>
                   <p class="music-player-status" aria-live="polite">Loading player…</p>
                 </div>
-                <button class="music-player-toggle" type="button" disabled aria-label="Play Love is more by TWICE" aria-pressed="false">
+                <button class="music-player-toggle" type="button" disabled aria-label="Play That’s So True by Gracie Abrams" aria-pressed="false">
                   <span class="music-player-icon" aria-hidden="true">▶</span>
                 </button>
                 <div class="music-player-progress" aria-hidden="true"><span></span></div>
@@ -225,19 +225,36 @@
       const root = document.querySelector("[data-youtube-id]");
       if (!root) return;
 
+      const tracks = [
+        { id: "898fwnkHoHg", title: "That’s So True", artist: "Gracie Abrams" },
+        { id: "1uHPZwjpCbQ", title: "Love is more", artist: "TWICE" }
+      ];
       const button = root.querySelector(".music-player-toggle");
       const icon = root.querySelector(".music-player-icon");
+      const trackTitle = root.querySelector(".music-track-title");
+      const trackArtist = root.querySelector(".music-track-artist");
       const status = root.querySelector(".music-player-status");
       const progress = root.querySelector(".music-player-progress span");
       let player = null;
       let progressTimer = null;
+      let currentTrack = 0;
+
+      function updateTrack(index) {
+        currentTrack = (index + tracks.length) % tracks.length;
+        const track = tracks[currentTrack];
+        trackTitle.textContent = track.title;
+        trackArtist.textContent = track.artist;
+        button.setAttribute("aria-label", "Play " + track.title + " by " + track.artist);
+        status.textContent = "Click to play · " + (currentTrack + 1) + "/" + tracks.length;
+      }
 
       function setPlaying(isPlaying) {
+        const track = tracks[currentTrack];
         root.classList.toggle("is-playing", isPlaying);
         button.setAttribute("aria-pressed", String(isPlaying));
-        button.setAttribute("aria-label", (isPlaying ? "Pause" : "Play") + " Love is more by TWICE");
+        button.setAttribute("aria-label", (isPlaying ? "Pause" : "Play") + " " + track.title + " by " + track.artist);
         icon.textContent = isPlaying ? "Ⅱ" : "▶";
-        status.textContent = isPlaying ? "Playing" : "Click to play";
+        status.textContent = (isPlaying ? "Playing" : "Click to play") + " · " + (currentTrack + 1) + "/" + tracks.length;
       }
 
       function updateProgress() {
@@ -261,8 +278,9 @@
           },
           events: {
             onReady: function () {
+              player.cuePlaylist(tracks.map(function (track) { return track.id; }), 0, 0, "small");
+              updateTrack(0);
               button.disabled = false;
-              status.textContent = "Click to play";
               progressTimer = window.setInterval(updateProgress, 500);
             },
             onStateChange: function (event) {
@@ -270,7 +288,10 @@
                 setPlaying(true);
               } else if (event.data === YT.PlayerState.ENDED) {
                 progress.style.width = "0%";
-                setPlaying(false);
+                const playlistIndex = typeof player.getPlaylistIndex === "function" ? player.getPlaylistIndex() : currentTrack;
+                const nextTrack = playlistIndex >= 0 ? playlistIndex + 1 : currentTrack + 1;
+                updateTrack(nextTrack);
+                player.playVideoAt(currentTrack);
               } else if (event.data === YT.PlayerState.PAUSED) {
                 setPlaying(false);
               }
